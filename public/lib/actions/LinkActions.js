@@ -6,6 +6,9 @@ let LinkActions = {
   },
   getAllBookmarks() {
     API.fetchAllBookmarks();
+  },
+  deleteBookmark(bookmark) {
+    API.removeBookmark(bookmark);
   }
 };
 

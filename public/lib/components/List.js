@@ -4,6 +4,7 @@ import Link from "./Link";
 class List extends React.Component {
   render() {
     var content = this.props.bookmarks.map(bookmark => {
+      //console.log('inside List:', bookmark);
       return <Link key={bookmark.id} link={bookmark} />;
     });
     return (
