@@ -9,7 +9,7 @@ class Link extends React.Component {
     LinkActions.likeBookmark(this.props.link);
   }
   render() {
-    let {title, url, safe} = this.props.link;
+    let {title, url, safe, like} = this.props.link;
 
     return (
       <div className="link">
@@ -17,7 +17,9 @@ class Link extends React.Component {
            style={ { color: (safe ? 'green' : 'black') } }
           >{title}</a>
         <button onClick={this.deleteLink.bind(this)}>Delete</button>
-        <button onClick={this.likeLink.bind(this)}>Like</button>
+        <button onClick={this.likeLink.bind(this)}>
+          { like ? 'Unlike' : 'Like' }
+        </button>
       </div>
     );
   }

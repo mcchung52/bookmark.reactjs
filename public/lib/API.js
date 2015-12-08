@@ -23,9 +23,9 @@ let API = {
   },
   likeBookmark(bookmark) {
     post("/api/links/like", bookmark)
-      .done(restLinks => {
-        console.log('API remove data',restLinks);
-        ServerActions.deleteOneLink(restLinks);
+      .done(link => {
+        console.log('API like link',link);
+        ServerActions.likeOneLink(link);
       });
   }
 };

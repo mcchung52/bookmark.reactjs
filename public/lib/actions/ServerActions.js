@@ -22,6 +22,12 @@ let ServerActions = {
       actionType: ActionTypes.DELETE_ONE_LINK,
       links
     });
+  },
+  likeOneLink(links) {
+    AppDispatcher.dispatch({
+      actionType: ActionTypes.LIKE_ONE_LINK,
+      links
+    });
   }
 };
 

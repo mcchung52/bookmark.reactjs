@@ -32,6 +32,14 @@ class LinkStore extends EventEmitter {
           console.log('inside LinkStore', _links);
           this.emit("CHANGE");
           break;
+        case ActionTypes.LIKE_ONE_LINK:
+          console.log("We received news about like link", action);
+          // account for the new data;
+          //_links.splice(_links.indexOf(action.link.id), 1);
+          _links = action.links;
+          console.log('inside LinkStore like', _links);
+          this.emit("CHANGE");
+          break;
         default:
           // do nothing
       }
@@ -39,7 +47,9 @@ class LinkStore extends EventEmitter {
   }
   // Expose some data
   getAll() {
+    console.log('_links:',_links);
     return _links.map(link => {
+      console.log('link', link);
       link.url = link.url.startsWith("http") ? link.url :
                   `http://${link.url}`;
       link.safe = link.url.startsWith("https");
