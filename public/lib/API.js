@@ -20,6 +20,13 @@ let API = {
         console.log('API remove data',restLinks);
         ServerActions.deleteOneLink(restLinks);
       });
+  },
+  likeBookmark(bookmark) {
+    post("/api/links/like", bookmark)
+      .done(restLinks => {
+        console.log('API remove data',restLinks);
+        ServerActions.deleteOneLink(restLinks);
+      });
   }
 };
 
