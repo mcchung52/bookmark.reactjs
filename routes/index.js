@@ -39,10 +39,13 @@ router.post('/api/links/like', function(req, res, next) {
    // console.log('req.connection#######################',req.connection);
    console.log('toLike id', toLike.id);
 
+   console.log('links(before):', links);
+   console.log('likeList(before):', likeList);
    if (likeList[ip]) {
       likeList[ip].forEach(function(linkId){
          //if req.body.id is in there, then delete and like=false
          var index = likeList[ip].indexOf(toLike.id);
+         console.log('index',index);
          if (index != -1) {
             likeList[ip].splice(index,1);
             if (likeList[ip].length==0) {
@@ -77,8 +80,8 @@ router.post('/api/links/like', function(req, res, next) {
          }
       }
    }
-   console.log('links', links);
-   console.log('likeList', likeList);
+   console.log('links(after):', links);
+   console.log('likeList(after):', likeList);
    res.json(links);
 });
 
