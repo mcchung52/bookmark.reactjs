@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "setup": "npm install jspm && jspm install",
-    //"post-install": "npm install jspm && jspm install",
-    "start": "node ./bin/www",
+    "start": "node ./bin/www"
   },
   "engines": {
     "node": "5.1.0"
