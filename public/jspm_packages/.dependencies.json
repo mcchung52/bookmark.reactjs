@@ -92,7 +92,6 @@
     "module": "github:jspm/nodelibs-module@^0.1.0",
     "fs": "github:jspm/nodelibs-fs@^0.1.0"
   },
-  "github:components/jquery@2.1.4": {},
   "github:jspm/nodelibs-buffer@0.1.0": {
     "buffer": "npm:buffer@^3.0.1"
   },
@@ -177,5 +176,9 @@
     "process": "github:jspm/nodelibs-process@^0.1.0",
     "fs": "github:jspm/nodelibs-fs@^0.1.0",
     "path": "github:jspm/nodelibs-path@^0.1.0"
-  }
+  },
+  "github:twbs/bootstrap@3.3.6": {
+    "jquery": "github:components/jquery"
+  },
+  "github:components/jquery@2.2.0": {}
 }
